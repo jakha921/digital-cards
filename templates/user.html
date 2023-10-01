@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ client.fullname }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div class="container">
+    <div class="gradient-header">
+        <div class="link">
+            my.digital.card/{{ client.nickname }}
+            <div class="copy">
+                <img src="{% static 'icons/copy.svg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="page-links">
+        <div class="head">
+            <div class="btn">
+                <a href="{% url 'vcard' client_nickname=client.nickname %}"
+                   download="{{ client.nickname }}.vcf"
+                   style="color: inherit; text-decoration: inherit;"
+                >
+                    <img src="{% static 'icons/arrow-down-circle-outline.svg' %}" alt="">
+                    <span>Save vCard</span>
+                </a>
+            </div>
+            <div class="avatar">
+                <img src="{{ client.avatar.url }}" alt="Avatar">
+            </div>
+            <div class="btn">
+                <a href=""
+                   style="color: inherit; text-decoration: inherit;"
+                >
+                    <img src="{% static 'icons/qr-code-scan.svg' %}" alt="">
+                    <span>QR</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="user-info">
+        <div class="name">
+            {{ client.fullname }}
+        </div>
+        <div class="job">{{ client.position }}</div>
+        <div class="job">{{ client.dob }}</div>
+    </div>
+    <div class="link-buttons">
+        <a href="tel:{{ client.phone }}" style="color: inherit; text-decoration: inherit;">
+            <div class="link-btn white" style="background-color: rgba(53, 230, 14);">
+                <div class="icon">
+                    <img src="{% static 'icons/call-outline.svg' %}" alt="">
+                </div>
+                <div class="text">
+                    <span>{{ client.phone }}</span>
+                    <span>Мобильный</span>
+                </div>
+            </div>
+        </a>
+        <a href="mailto:{{ client.email }}" style="color: inherit; text-decoration: inherit;">
+            <div class="link-btn white" style="background-color: rgba(35,35,95,0.73);">
+                <div class="icon">
+                    <img src="{% static 'icons/envelope.svg' %}" alt="">
+                </div>
+                <div class="text">
+                    <span>{{ client.email }}</span>
+                    <span>Почта</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- for test -->
+        {% for button in buttons %}
+            <a href="{{ button.link }}" style="color: inherit; text-decoration: inherit;">
+                <div class="link-btn white" style="background-color: rgb({{ button.color }});">
+                    <div class="icon">
+                        <img src="{{ button.logo.url }}" alt="">
+                    </div>
+                    <div class="text">
+                        <span>{{ button.link }}</span>
+                        <span>{{ button.text }}</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        <!-- for test -->
+
+    </div>
+</div>
+</body>
+</html>

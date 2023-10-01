@@ -1,0 +1,4 @@
+.idea
+db.sqlite3
+app/media/avatar
+app/media/logo

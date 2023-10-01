@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .gradient-header {
+    background: url(https://my.etag.store/images/background.jpg) no-repeat center center;
+    width: 100%;
+    height: 200px;
+    border-radius: 0 0 32px 32px;
+    padding: 0 30px;
+}
+
+.container .gradient-header .link {
+    padding-top: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.container .gradient-header .link .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .gradient-header .link .copy img {
+    width: 20px;
+}
+
+
+.container .page-links {
+    width: 470px;
+}
+
+.container .page-links .head {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.container .page-links .head .btn {
+    width: 195px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    padding-right: 30px;
+}
+
+.container .page-links .head .btn img {
+    width: 30px;
+}
+
+.container .page-links .head .btn:last-child {
+    justify-content: space-around;
+    gap: 40px;
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.container .page-links .head .avatar {
+    width: 110px;
+    height: 110px;
+    background: -webkit-linear-gradient(left top, #ff5005 0, #edff19);
+    border-radius: 50%;
+    padding: 2px;
+    border: 3px solid #fff;
+    left: calc(50% - 55px);
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0 12px 20px 20px rgba(18, 38, 63, .07);
+}
+
+.container .page-links .head .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 3px solid #fff;
+}
+
+.container .user-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container .user-info .name {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.container .user-info .job {
+    color: #8b8b8b;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .link-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 470px;
+}
+
+.container .link-buttons .link-btn {
+    width: 100%;
+    align-items: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.container .link-buttons .link-btn.white {
+    color: #fff;
+}
+
+.container .link-buttons .link-btn.white .icon {
+    border-right: 1px solid #fff;
+}
+
+.container .link-buttons .link-btn .icon {
+    align-items: center;
+    border-right: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 60px;
+    margin-right: 18px;
+    font-size: 20px;
+}
+
+.container .link-buttons .link-btn .icon img {
+    width: 35px;
+}
+
+.container .link-buttons .link-btn .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.container .link-buttons .link-btn .text span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.container .link-buttons .link-btn .text span:first-child {
+    font-weight: 300;
+}
+
+.container .link-buttons .link-btn .text span:last-child {
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .container .link-buttons {
+        width: 90%;
+    }
+
+    .container .page-links .head {
+        justify-content: space-around;
+    }
+
+    .container .page-links .head .btn {
+        width: 100px;
+        padding: 0 !important;
+        gap: 10px;
+    }
+}

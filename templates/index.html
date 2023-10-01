@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="gradient-header">
+            <div class="link">
+                my.etag.store/Barber 
+                <div class="copy">
+                    <img src="{% static 'icons/copy.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="page-links">
+            <div class="head">
+                <div class="btn">
+                    <img src="{% static 'icons/check.svg' %}" alt="">
+                    save 
+                </div>
+                <div class="avatar">
+                    <img src="{% static 'images/avatar.jpg' %}" alt="">
+                </div>
+                <div class="btn">
+                    <a href="">
+                        <img src="{% static 'icons/scan.svg' %}" alt="">
+                    </a>
+                    <a href="">
+                        <img src="{% static 'icons/settings.svg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="name">
+                Екатерина
+            </div>
+            <div class="job">Barber</div>
+        </div>
+        <div class="link-buttons">
+            <div class="link-btn" style="background-color: rgba(53, 230, 14, 0.88);">
+                <div class="icon">
+                    <img src="{% static 'icons/check.svg' %}" alt="">
+                </div>
+                <div class="text">
+                    <span>https://pay.mysbertips.ru/43889309</span>
+                    <span>Сбер Чаевые.</span>
+                </div>
+            </div>
+            <div class="link-btn" style="background-color: rgba(255, 220, 46, 0.49);">
+                <div class="icon">
+                    <img src="{% static 'icons/check.svg' %}" alt="">
+                </div>
+                <div class="text">
+                    <span>https://pay.mysbertips.ru/43889309</span>
+                    <span>Сбер Чаевые.</span>
+                </div>
+            </div>
+            <div class="link-btn white" style="background-color: rgb(240, 64, 14);">
+                <div class="icon">
+                    <img src="{% static 'icons/check.svg' %}" alt="">
+                </div>
+                <div class="text">
+                    <span>https://pay.mysbertips.ru/43889309</span>
+                    <span>Сбер Чаевые.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
